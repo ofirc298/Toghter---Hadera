@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { InputContainer } from "./InputContainer";
 
 export const FormBody = () => {
+
   const [familyType, setFamilyType] = useState(null);
+  
+  const formRef = useRef()
+
+  const handleSubmit = (e) => {
+    // e.preventDefault()
+    // console.log(formRef.current.elements)
+  }
+
   return (
     <div className="flex flex-col w-full gap-8">
       <section className="flex flex-col items-center gap-8 w-full bg-white py-6 shadow-md px-2">
@@ -32,8 +41,9 @@ export const FormBody = () => {
           </button>
         </div>
       </section>
-      <section className="flex flex-col gap-8">
-        <form
+      <form className="flex flex-col gap-8">
+        <section
+        ref={formRef}
           action="#"
           className="grid grid-cols-1 lg:grid-cols-3 w-full gap-8 bg-white p-2 md:p-6 lg:p-14 shadow-md [&_input]:rounded-md [&_input]:bg-slate-200 [&_input]:p-2 [&_label]:text-slate-800 [&_label]:text-md"
         >
@@ -43,13 +53,16 @@ export const FormBody = () => {
             </h1>
             <InputContainer>
               <label htmlFor="name">שם מלא של נציג / נציגת המשפחה</label>
-              <input className="w-full" type="text" name="name" />
+              <input className="w-full" required minLength={3} maxLength={20} type="text" name="name" />
             </InputContainer>
             <InputContainer>
               <label htmlFor="phone">טלפון של נציג / נציגת המשפחה</label>
               <div className="w-full flex bg-slate-200 border-2 focus-within:border-black box-border border-transparent rounded-md items-center pl-2">
                 <input
-                  type="text"
+                required
+                  minLength={9}
+                  maxLength={9}
+                  type="tel"
                   name="phone"
                   className="focus:outline-none grow"
                 />
@@ -59,7 +72,7 @@ export const FormBody = () => {
             </InputContainer>
             <InputContainer>
               <label htmlFor="address">כתובת המשפחה המארחת</label>
-              <input className="w-full" type="text" name="address" />
+              <input className="w-full" minLength={5} required type="text" name="address" />
             </InputContainer>
           </article>
           <article className="w-full flex flex-col gap-8">
@@ -70,19 +83,19 @@ export const FormBody = () => {
               <label htmlFor="children">
                 כמה ילדים יש במשפחה ובאילו גילאים
               </label>
-              <input className="w-full" type="text" name="children" />
+              <input className="w-full" required type="text" name="children" />
             </InputContainer>
             <InputContainer>
               <label htmlFor="description">תאר בקצרה את משפחתך</label>
-              <input className="w-full" type="text" name="description" />
+              <input className="w-full" required minLength={10} type="text" name="description" />
             </InputContainer>
             <InputContainer>
               <label>תאריך אירוח</label>
                 <div className="flex [&_input]:grow gap-8 items-center">
                   <label htmlFor="date-start">מ-</label>
-                  <input className="grow text-slate-500 focus:text-black" type="date" name="date-start" />
+                  <input className="grow text-slate-500 focus:text-black" required type="date" name="date-start" />
                   <label htmlFor="date-end">עד-</label>
-                  <input className="grow text-slate-500 focus:text-black" type="date" name="date-end" />
+                  <input className="grow text-slate-500 focus:text-black" required type="date" name="date-end" />
                 </div>
             </InputContainer>
           </article>
@@ -95,11 +108,11 @@ export const FormBody = () => {
               <textarea className="bg-slate-200 w-full resize-none" name="nutrition" id="" cols="30" rows="10"></textarea>
             </div>
           </article>
-        </form>
-        <button className="w-full bg-btn font-bold text-2xl p-4 text-center rounded-md text-white shadow-md">
+        </section>
+        <button onClick={handleSubmit} className="w-full bg-btn font-bold text-2xl p-4 text-center rounded-md text-white shadow-md">
           לשליחת השאלון
         </button>
-      </section>
+      </form>
     </div>
   );
 };
