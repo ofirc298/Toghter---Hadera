@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         btn: "#2B59C0",
         form: "#E3DFE0",
+        footer: "#CDCDCD",
+        banner: "#642C8A",
       },
       fontFamily: {
         'heebo': ['"Heebo"', 'sans-serif']
