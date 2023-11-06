@@ -48,7 +48,7 @@ export const FormBody = () => {
           className="grid grid-cols-1 lg:grid-cols-3 w-full gap-8 bg-white p-2 md:p-6 lg:p-14 shadow-md [&_input]:rounded-md [&_input]:bg-slate-200 [&_input]:p-2 [&_label]:text-slate-800 [&_label]:text-md"
         >
           <article className="w-full flex flex-col gap-8">
-            <h1 className="font-bold text-btn text-lg border-b border-btn py-2 mb-4">
+            <h1 className="font-bold text-btn text-lg border-b border-btn py-2">
               פרטי משפחה
             </h1>
             <InputContainer>
@@ -76,7 +76,7 @@ export const FormBody = () => {
             </InputContainer>
           </article>
           <article className="w-full flex flex-col gap-8">
-            <h1 className="font-bold text-btn text-lg border-b border-btn py-2 mb-4">
+            <h1 className="font-bold text-btn text-lg border-b border-btn py-2">
               אנא ספרו קצת על עצמכם
             </h1>
             <InputContainer>
@@ -99,13 +99,13 @@ export const FormBody = () => {
                 </div>
             </InputContainer>
           </article>
-          <article className="w-full flex flex-col">
-            <h1 className="font-bold text-btn text-lg border-b border-btn py-2 mb-4 gap-8">
+          <article className="w-full flex flex-col gap-8">
+            <h1 className="font-bold text-btn text-lg border-b border-btn py-2 gap-8">
               העדפות תזונתיות
             </h1>
-            <div className="flex flex-col grow justify-start gap-4">
+            <div className="flex flex-col grow justify-between">
               <label htmlFor="nutrition">האם יש אצלכם הגבלות תזונתיות כלשהן? טבעוני? צמחוני? רגישויות וכדומה...</label>
-              <textarea className="bg-slate-200 w-full resize-none" name="nutrition" id="" cols="30" rows="10"></textarea>
+              <textarea className="bg-slate-200 w-full resize-none rounded" name="nutrition" id="" cols="30" rows="9"></textarea>
             </div>
           </article>
         </section>
