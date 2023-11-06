@@ -4,7 +4,6 @@ import { Banner } from "./Banner";
 export const Footer = () => {
   return (
     <footer>
-      <Banner />
       <div className="flex gap-4 w-full bg-footer justify-center items-center p-6">
         <p className="flex items-center justify-center gap-2 text-sm">
           אפיון ועיצוב:<span className="pt-[2px]">050-4120024</span>
