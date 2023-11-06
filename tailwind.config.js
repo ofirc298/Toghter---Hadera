@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         btn: "#2B59C0",
-        form: "#E3DFE0",
+        background: "#E3DFE0",
         footer: "#CDCDCD",
         banner: "#642C8A",
       },

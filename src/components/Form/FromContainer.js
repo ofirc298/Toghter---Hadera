@@ -3,7 +3,7 @@ import { FormBody } from "./FormBody";
 
 export const FromContainer = () => {
   return (
-    <div className="w-full flex justify-center items-center bg-form py-20">
+    <div className="w-full flex justify-center items-center bg-form py-2 sm:py-8 md:py-16 lg:py-20">
       <article className="flex flex-col gap-12 container xl:w-3/4">
         <section className="flex flex-col items-center gap-6">
           <h1 className="text-xl font-semibold">

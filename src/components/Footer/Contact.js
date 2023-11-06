@@ -2,7 +2,7 @@ import React from "react";
 
 export const Contact = () => {
   return (
-    <div className="h-[235px] text-2xl text-center text-slate-900 flex justify-center items-center">
+    <div className="h-[163px] sm:h-[235px] sm:text-2xl text-center text-slate-900 flex justify-center items-center">
       <article className="flex flex-col items-center">
         <p className="">לשאלות נוספות,</p>
         <p>מוזמנים לפנות אלי נורית מנחם</p>

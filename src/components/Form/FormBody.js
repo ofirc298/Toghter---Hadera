@@ -13,15 +13,15 @@ export const FormBody = () => {
   }
 
   return (
-    <div className="flex flex-col w-full gap-8">
+    <div className="flex flex-col w-full gap-8 p-8 text-sm sm:text-base">
       <section className="flex flex-col items-center gap-8 w-full bg-white py-6 shadow-md px-2">
-        <h1 className="text-lg text-center">
+        <h1 className="text-lg text-center max-md:px-2">
           האם אתם משפחה שרוצה לארח או משפחה מפונה המעוניינת להתארח?
         </h1>
         <div className="flex gap-3">
           <button
             onClick={() => setFamilyType("host")}
-            className={`p-1 px-6 rounded duration-75 ${
+            className={`p-2 px-6 rounded duration-75 ${
               familyType == "host"
                 ? "bg-btn text-white"
                 : "bg-form text-slate-600"
@@ -31,7 +31,7 @@ export const FormBody = () => {
           </button>
           <button
             onClick={() => setFamilyType("guest")}
-            className={`p-1 px-6 rounded duration-75 ${
+            className={`p-2 px-6 rounded duration-75 ${
               familyType == "guest"
                 ? "bg-btn text-white"
                 : "bg-form text-slate-600"
@@ -105,7 +105,7 @@ export const FormBody = () => {
             </h1>
             <div className="flex flex-col grow justify-between">
               <label htmlFor="nutrition">האם יש אצלכם הגבלות תזונתיות כלשהן? טבעוני? צמחוני? רגישויות וכדומה...</label>
-              <textarea className="bg-slate-200 w-full resize-none rounded" name="nutrition" id="" cols="30" rows="9"></textarea>
+              <textarea className="bg-slate-200 w-full resize-none rounded" name="nutrition" id="" cols="30" rows="8"></textarea>
             </div>
           </article>
         </section>

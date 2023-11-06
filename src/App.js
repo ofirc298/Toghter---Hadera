@@ -9,7 +9,7 @@ import { Contact } from './components/Footer/Contact';
 
 function App() {
   return (
-    <div className="[&_*]:font-heebo">
+    <div className="[&_*]:font-heebo bg-background">
       <Header />
       <Info />
       <FromContainer />
