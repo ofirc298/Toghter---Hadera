@@ -1,13 +1,15 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Info from './components/Info/Info';
+import { FromContainer } from './components/Form/FromContainer';
 
 
 function App() {
   return (
-    <div>
+    <div className="[&_*]:font-heebo">
       <Header />
       <Info />
+      <FromContainer />
     </div>
   );
 }
