@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Info from './components/Info/Info';
-import { FromContainer } from './components/Form/FromContainer';
+import { FormContainer } from './components/Form/FormContainer';
 import { Footer } from './components/Footer/Footer';
 import { Banner } from './components/Footer/Banner';
 import { Contact } from './components/Footer/Contact';
@@ -12,7 +12,7 @@ function App() {
     <div className="[&_*]:font-heebo bg-background">
       <Header />
       <Info />
-      <FromContainer />
+      <FormContainer />
       <Banner />
       <Contact />
       <Footer />
