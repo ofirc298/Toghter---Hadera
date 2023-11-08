@@ -4,7 +4,8 @@ import TitleHeader from './TitleHeader'
 
 function Header() {
   return (
-    <div className="background-container w-[100%] h-[540px] bg-gradient-to-r from-pink-500 via-violet-500 to-sky-700">
+    <div 
+      className="background-container h-[130vw] sm:h-[110vw] md:h-[50vw] lg:h-[45vw] xl:h-[40vw] 2xl:h-[35vw]">
       <TitleHeader/>
     </div>
   )

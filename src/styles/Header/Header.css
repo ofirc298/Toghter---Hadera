@@ -1,8 +1,29 @@
 .background-container {
-  background-image: url("../../assets/backGroundHeader.png");
+  
+  background-image: url("../../assets/backGroundHeaderMobile.png");
   background-color: #E3DFE0;
-  background-position: left;
+  background-position: left bottom;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+
+/* @media (width < 1024px){
+  .background-container{
+    background-image: url("../../assets/backGroundHeaderMobile.png");
+    background-position: left 80%;
+  }
+} */
+@media (width > 768px){
+  .background-container{
+    background-image: url("../../assets/backGroundHeader.png");
+    background-position: 25%;
+  }
+}
+
+@media (width > 1280px){
+  .background-container{
+    background-position: left;
+  }
 }
