@@ -1,11 +1,9 @@
 import React from 'react'
-//from-[20%] via-[50%] to-[70%]
 export default function Info() {
   return (
     <section 
-      style={{fontFamily:"Heebo , sans-serif "}}
       className="
-        w-screen grid grid-cols-1 gap-y-[15vw]
+        w-screen grid grid-cols-1 gap-y-[15vw] font-heebo
         py-[15vw] bg-grdnt md:bg-lg-grdnt
         md:grid-cols-2 md:gap-x-[5vw] md:px-[5vw] md:py-[10vw]
         lg:px-[8vw]
@@ -114,75 +112,3 @@ export default function Info() {
     </section>
   )
 }
-
-/*
-          <svg xmlns="http://www.w3.org/2000/svg" className='w-[15%] h-[20%] mb-[-6%] md:w-[10%] md:h-[15%] md:mb-[-4%] lg:w-[17%] lg:h-[25%] lg:mb-[-8%]' viewBox="0 0 110 97" fill="none">
-            <g clip-path="url(#clip0_83_802)">
-              <path className='max-lg:hidden' d="M55.2742 96.9997L97.2672 55.1222C131.518 20.9653 89.5253 -20.9122 55.2742 13.2448C20.0784 -21.8542 -21.9145 20.0232 13.2813 55.1222L55.2742 96.9997Z" fill="#FC4C8F"/>
-              <path className='lg:hidden' d="M55.2742 96.9997L97.2672 55.1222C131.518 20.9653 89.5253 -20.9122 55.2742 13.2448C20.0784 -21.8542 -21.9145 20.0232 13.2813 55.1222L55.2742 96.9997Z" fill="#AA5AB2"/>
-
-              <path className='max-lg:hidden' opacity="0.36" d="M33.8533 2.0557C46.6563 6.50583 53.296 20.4347 48.6886 33.1673C44.0791 45.9 29.9648 52.6145 17.1618 48.1643C4.35881 43.7142 -2.28093 29.7853 2.32649 17.0527C6.93805 4.32002 21.0524 -2.39443 33.8533 2.0557Z" fill="#FC4C8F"/>
-              <path className='lg:hidden' opacity="0.36" d="M33.8533 2.0557C46.6563 6.50583 53.296 20.4347 48.6886 33.1673C44.0791 45.9 29.9648 52.6145 17.1618 48.1643C4.35881 43.7142 -2.28093 29.7853 2.32649 17.0527C6.93805 4.32002 21.0524 -2.39443 33.8533 2.0557Z" fill="#AA5AB2"/>
-
-              <path className='max-lg:hidden' opacity="0.36" d="M85.7158 47.9494C73.0909 48.8626 62.2291 39.3756 61.4543 26.7607C60.6774 14.1479 70.2817 3.18164 82.9066 2.27054C95.5314 1.35738 106.393 10.8444 107.168 23.4593C107.943 36.0721 98.3385 47.0383 85.7158 47.9494Z" fill="#FD4C8F"/>
-              <path className='lg:hidden' opacity="0.36" d="M85.7158 47.9494C73.0909 48.8626 62.2291 39.3756 61.4543 26.7607C60.6774 14.1479 70.2817 3.18164 82.9066 2.27054C95.5314 1.35738 106.393 10.8444 107.168 23.4593C107.943 36.0721 98.3385 47.0383 85.7158 47.9494Z" fill="#AA5AB2"/>
-
-            </g>
-            <defs>
-              <clipPath id="clip0_83_802">
-                <rect width="110" height="97" fill="white"/>
-              </clipPath>
-            </defs>
-          </svg>
-*/
-/*
-    <div className="
-      grid grid-cols-1 lg:grid-cols-2 
-      gap-[70px] xl:gap-[160px]
-      w-screen py-[120px] xl:py-[150px]
-      max-lg:to-[85%] lg:to-[60%] lg:via-[40%] 
-      bg-gradient-to-br from-[#025EB5] to-[#FD4C8F] via-[#9460C1] lg:bg-gradient-to-r lg:from-[#FD4C8F]  lg:to-[#025EB5]">
-
-      <div className='flex justify-center lg:justify-end items-center'>
-        <div 
-          className="w-[80%] xl:w-[70%] 
-          flex flex-col justify-center items-center 
-          gap-6 xl:gap-10 xl:px-10 text-center lg:text-right">
-          <p className="text-white text-2xl font-normal font-['Heebo']">שלום לכולם,<br />שמי נורית מנחם ויחד עם קבוצה נוספת של אנשים טובים החלטנו לקשר בין משפחות מאזור חדרה והסביבה המעוניינות לארח לארוחת שישי, שבת או סתם לערב בכייף באמצע השבוע, משפחות שפונו מבתיהם ומתארחות בחדרה במלון ג'ייקוב ובכפר הנופש לחיילים בגבעת אולגה.<br /></p>
-          <p className="text-white text-2xl font-extrabold font-['Heebo']">הכוונה היא ליצור רגע של משפחתיות וחום ויציאה מהטירוף במציאות בלתי נתפסת לכולנו. כולנו רוצים לתת וכולנו יודעים שרק ביחד ננצח בכוח וברוח והנה הזדמנות טובה.</p>
-        </div>
-      </div>
-
-      <div className='flex justify-center lg:justify-start items-center'>
-        <div className="w-[85%] xl:w-[73%] px-8 pt-5 bg-white rounded-tr-[65px] rounded-bl-[65px] shadow  flex flex-col justify-evenly items-center gap-2" >
-          <div className="text-center">
-            <span className="text-sky-700 text-[26px] font-bold font-['Heebo'] leading-[29px]">בנימה אישית:<br />          </span>
-            <span className="text-zinc-800 text-2xl font-normal font-['Heebo'] leading-[29px]">למשפחות המארחות – יישר כח !<br />למשפחות המפונים – אשריכם על החוסן הנפשי האישי!<br />אנו מבינים שזה לא פשוט לעשות את הצעד הראשון ולהיכנס אל תוך בית שאתם לא מכירים, גם אם זה רק לערב אחד. אך אנחנו רוצים שתדעו שיש כל כך הרבה משפחות שפותחות את ביתן ורוצות לארח אתכם אם רק תגידו כן.<br />מה שברור הוא שאנו זרים לכם רק בחיצוניות - לא בתודעה. <br />בתודעה אנחנו יחד - בלב ובנשמה. <br /></span>
-            <span className="text-zinc-800 text-2xl font-bold font-['Heebo'] leading-[29px]">מחכים לכם!</span>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" className='w-[15%] h-[20%] mb-[-6%] md:w-[10%] md:h-[15%] md:mb-[-4%] lg:w-[17%] lg:h-[25%] lg:mb-[-8%]' viewBox="0 0 110 97" fill="none">
-            <g clip-path="url(#clip0_83_802)">
-              <path className='max-lg:hidden' d="M55.2742 96.9997L97.2672 55.1222C131.518 20.9653 89.5253 -20.9122 55.2742 13.2448C20.0784 -21.8542 -21.9145 20.0232 13.2813 55.1222L55.2742 96.9997Z" fill="#FC4C8F"/>
-              <path className='lg:hidden' d="M55.2742 96.9997L97.2672 55.1222C131.518 20.9653 89.5253 -20.9122 55.2742 13.2448C20.0784 -21.8542 -21.9145 20.0232 13.2813 55.1222L55.2742 96.9997Z" fill="#AA5AB2"/>
-
-              <path className='max-lg:hidden' opacity="0.36" d="M33.8533 2.0557C46.6563 6.50583 53.296 20.4347 48.6886 33.1673C44.0791 45.9 29.9648 52.6145 17.1618 48.1643C4.35881 43.7142 -2.28093 29.7853 2.32649 17.0527C6.93805 4.32002 21.0524 -2.39443 33.8533 2.0557Z" fill="#FC4C8F"/>
-              <path className='lg:hidden' opacity="0.36" d="M33.8533 2.0557C46.6563 6.50583 53.296 20.4347 48.6886 33.1673C44.0791 45.9 29.9648 52.6145 17.1618 48.1643C4.35881 43.7142 -2.28093 29.7853 2.32649 17.0527C6.93805 4.32002 21.0524 -2.39443 33.8533 2.0557Z" fill="#AA5AB2"/>
-
-              <path className='max-lg:hidden' opacity="0.36" d="M85.7158 47.9494C73.0909 48.8626 62.2291 39.3756 61.4543 26.7607C60.6774 14.1479 70.2817 3.18164 82.9066 2.27054C95.5314 1.35738 106.393 10.8444 107.168 23.4593C107.943 36.0721 98.3385 47.0383 85.7158 47.9494Z" fill="#FD4C8F"/>
-              <path className='lg:hidden' opacity="0.36" d="M85.7158 47.9494C73.0909 48.8626 62.2291 39.3756 61.4543 26.7607C60.6774 14.1479 70.2817 3.18164 82.9066 2.27054C95.5314 1.35738 106.393 10.8444 107.168 23.4593C107.943 36.0721 98.3385 47.0383 85.7158 47.9494Z" fill="#AA5AB2"/>
-
-            </g>
-            <defs>
-              <clipPath id="clip0_83_802">
-                <rect width="110" height="97" fill="white"/>
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
-      </div>
-
- 
-
-
-      </div>
-*/

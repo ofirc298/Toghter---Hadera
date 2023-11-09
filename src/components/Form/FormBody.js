@@ -3,7 +3,7 @@ import { InputContainer } from "./InputContainer";
 
 export const FormBody = () => {
 
-  const [familyType, setFamilyType] = useState(null);
+  const [familyType, setFamilyType] = useState("host");
   
   const formRef = useRef()
 
@@ -70,10 +70,13 @@ export const FormBody = () => {
                 <span className="text-slate-600">972+</span>
               </div>
             </InputContainer>
-            <InputContainer>
-              <label htmlFor="address">כתובת המשפחה המארחת</label>
-              <input className="w-full" minLength={5} required type="text" name="address" />
-            </InputContainer>
+            { 
+              familyType === "host" &&
+              <InputContainer>
+                <label htmlFor="address">כתובת המשפחה המארחת</label>
+                <input className="w-full" minLength={5} required type="text" name="address" />
+              </InputContainer>
+            }
           </article>
           <article className="w-full flex flex-col gap-8">
             <h1 className="font-bold text-btn text-lg border-b border-btn py-2">

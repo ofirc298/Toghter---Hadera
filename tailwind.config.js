@@ -10,7 +10,7 @@ module.exports = {
         banner: "#642C8A",
       },
       fontFamily: {
-        'heebo': ['"Heebo"', 'sans-serif']
+        heebo: ['"Heebo"', 'sans-serif']
       },
       backgroundImage:{
         grdnt:"linear-gradient(338deg, #FD4C8F 28.36%, #9460C1 48.62%, #025EB5 63.25%)",
