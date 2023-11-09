@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { InputContainer } from "./InputContainer";
+import { postData } from "../ApiUtils";
 
 export const FormBody = () => {
 
@@ -7,10 +8,29 @@ export const FormBody = () => {
   
   const formRef = useRef()
 
-  const handleSubmit = (e) => {
-    // e.preventDefault()
-    // console.log(formRef.current.elements)
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: formRef.current.elements.name.value,
+      phone: formRef.current.elements.phone.value,
+      address: formRef.current.elements.address.value,
+      children: formRef.current.elements.children.value,
+      description: formRef.current.elements.description.value,
+      dateStart: formRef.current.elements["date-start"].value,
+      dateEnd: formRef.current.elements["date-end"].value,
+      nutrition: formRef.current.elements.nutrition.value,
+    };
+
+    try {
+      // Call the postData function with the form data
+      const response = await postData(formData);
+      console.log(response);
+    } catch (error) {
+      console.error("Error:", error);
+ 
+    }
+  };
 
   return (
     <div className="flex flex-col w-full gap-8 p-8 text-sm sm:text-base">
