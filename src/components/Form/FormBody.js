@@ -5,32 +5,38 @@ import { postData } from "../ApiUtils";
 export const FormBody = () => {
 
   const [familyType, setFamilyType] = useState("host");
+  const [formInfo, setFormInfo] = useState('');
   
   const formRef = useRef()
+ 
 
   const handleSubmit = async (e) => {
+
     e.preventDefault();
 
-    const formData = {
-      name: formRef.current.elements.name.value,
-      phone: formRef.current.elements.phone.value,
-      address: formRef.current.elements.address.value,
-      children: formRef.current.elements.children.value,
-      description: formRef.current.elements.description.value,
-      dateStart: formRef.current.elements["date-start"].value,
-      dateEnd: formRef.current.elements["date-end"].value,
-      nutrition: formRef.current.elements.nutrition.value,
-    };
+    const name = formRef.current.name.value;
+    const phone = formRef.current.phone.value;
+    const address = formRef.current.address.value;
+    const children = formRef.current.children.value;
+    const description = formRef.current.description.value;
+    const dateStart = formRef.current["date-start"].value;
+    const dateEnd = formRef.current["date-end"].value;
+    const nutrition = formRef.current.nutrition.value;
+    setFormInfo({ ...formInfo,name, phone, address, children, description, dateStart, dateEnd, nutrition });
+    e.target.reset()
 
+    
+    // Call the postData function with the form data
     try {
-      // Call the postData function with the form data
-      const response = await postData(formData);
+
+      const response = await postData(formInfo);
       console.log(response);
     } catch (error) {
       console.error("Error:", error);
- 
+
     }
   };
+
 
   return (
     <div className="flex flex-col w-full gap-8 p-8 text-sm sm:text-base">
@@ -41,30 +47,29 @@ export const FormBody = () => {
         <div className="flex gap-3">
           <button
             onClick={() => setFamilyType("host")}
-            className={`p-2 px-6 rounded duration-75 ${
-              familyType == "host"
-                ? "bg-btn text-white"
-                : "bg-form text-slate-600"
-            }`}
+            className={`p-2 px-6 rounded duration-75 ${familyType == "host"
+              ? "bg-btn text-white"
+              : "bg-form text-slate-600"
+              }`}
           >
             משפחה מארחת
           </button>
           <button
             onClick={() => setFamilyType("guest")}
-            className={`p-2 px-6 rounded duration-75 ${
-              familyType == "guest"
-                ? "bg-btn text-white"
-                : "bg-form text-slate-600"
-            }`}
+            className={`p-2 px-6 rounded duration-75 ${familyType == "guest"
+              ? "bg-btn text-white"
+              : "bg-form text-slate-600"
+              }`}
           >
             משפחה מתארחת
           </button>
         </div>
       </section>
-      <form className="flex flex-col gap-8">
+      <form className="flex flex-col gap-8" action="#" ref={formRef} onSubmit={handleSubmit}>
         <section
-        ref={formRef}
-          action="#"
+
+
+
           className="grid grid-cols-1 lg:grid-cols-3 w-full gap-8 bg-white p-2 md:p-6 lg:p-14 shadow-md [&_input]:rounded-md [&_input]:bg-slate-200 [&_input]:p-2 [&_label]:text-slate-800 [&_label]:text-md"
         >
           <article className="w-full flex flex-col gap-8">
@@ -79,7 +84,7 @@ export const FormBody = () => {
               <label htmlFor="phone">טלפון של נציג / נציגת המשפחה</label>
               <div className="w-full flex bg-slate-200 border-2 focus-within:border-black box-border border-transparent rounded-md items-center pl-2">
                 <input
-                required
+                  required
                   minLength={9}
                   maxLength={9}
                   type="tel"
@@ -90,7 +95,7 @@ export const FormBody = () => {
                 <span className="text-slate-600">972+</span>
               </div>
             </InputContainer>
-            { 
+            {
               familyType === "host" &&
               <InputContainer>
                 <label htmlFor="address">כתובת המשפחה המארחת</label>
@@ -114,12 +119,12 @@ export const FormBody = () => {
             </InputContainer>
             <InputContainer>
               <label>תאריך אירוח</label>
-                <div className="flex [&_input]:grow gap-8 items-center">
-                  <label htmlFor="date-start">מ-</label>
-                  <input className="grow text-slate-500 focus:text-black" required type="date" name="date-start" />
-                  <label htmlFor="date-end">עד-</label>
-                  <input className="grow text-slate-500 focus:text-black" required type="date" name="date-end" />
-                </div>
+              <div className="flex [&_input]:grow gap-8 items-center">
+                <label htmlFor="date-start">מ-</label>
+                <input className="grow text-slate-500 focus:text-black" required type="date" name="date-start" />
+                <label htmlFor="date-end">עד-</label>
+                <input className="grow text-slate-500 focus:text-black" required type="date" name="date-end" />
+              </div>
             </InputContainer>
           </article>
           <article className="w-full flex flex-col gap-8">
@@ -132,7 +137,7 @@ export const FormBody = () => {
             </div>
           </article>
         </section>
-        <button onClick={handleSubmit} className="w-full bg-btn font-bold text-2xl p-4 text-center rounded-md text-white shadow-md">
+        <button type="submit" className="w-full bg-btn font-bold text-2xl p-4 text-center rounded-md text-white shadow-md">
           לשליחת השאלון
         </button>
       </form>
