@@ -51,7 +51,7 @@ export const FormBody = () => {
         <div className="flex gap-3">
           <button
             onClick={() => setFamilyType("host")}
-            className={`p-2 px-6 rounded duration-75 ${familyType == "host"
+            className={`p-2 px-6 rounded duration-75 ${familyType === "host"
               ? "bg-btn text-white"
               : "bg-form text-slate-600"
               }`}
@@ -60,7 +60,7 @@ export const FormBody = () => {
           </button>
           <button
             onClick={() => setFamilyType("guest")}
-            className={`p-2 px-6 rounded duration-75 ${familyType == "guest"
+            className={`p-2 px-6 rounded duration-75 ${familyType === "guest"
               ? "bg-btn text-white"
               : "bg-form text-slate-600"
               }`}
