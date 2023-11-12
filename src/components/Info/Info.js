@@ -3,7 +3,7 @@ export default function Info() {
   return (
     <section 
       className="
-        w-screen grid grid-cols-1 gap-y-[15vw] font-heebo
+        grid grid-cols-1 gap-y-[15vw] font-heebo
         py-[15vw] bg-grdnt md:bg-lg-grdnt
         md:grid-cols-2 md:gap-x-[5vw] md:px-[5vw] md:py-[10vw]
         lg:px-[8vw]

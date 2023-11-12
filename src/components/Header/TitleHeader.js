@@ -2,7 +2,7 @@ import React from 'react'
 
 function TitleHeader() {
     return (
-        <div className='w-[100vw] flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center'>
             <p className=' leading-[60px] md:w-full md:text-right md:pr-8 '>{"ב״ה"}</p>
             <div className='
                     flex flex-col justify-center items-center w-full mt-[3vw]

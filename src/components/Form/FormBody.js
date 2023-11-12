@@ -5,32 +5,36 @@ import { postData } from "../ApiUtils";
 export const FormBody = () => {
 
   const [familyType, setFamilyType] = useState("host");
-  const [formInfo, setFormInfo] = useState('');
-  
+
   const formRef = useRef()
- 
+
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
 
     const name = formRef.current.name.value;
     const phone = formRef.current.phone.value;
-    const address = formRef.current.address.value;
+    let address = ""
+    if (familyType === "host") {
+      address = formRef.current.address.value;
+    }
     const children = formRef.current.children.value;
     const description = formRef.current.description.value;
     const dateStart = formRef.current["date-start"].value;
     const dateEnd = formRef.current["date-end"].value;
     const nutrition = formRef.current.nutrition.value;
-    setFormInfo({ ...formInfo,name, phone, address, children, description, dateStart, dateEnd, nutrition });
     e.target.reset()
 
-    
+
     // Call the postData function with the form data
     try {
-
-      const response = await postData(formInfo);
-      console.log(response);
+      if (familyType === "host") {
+        const response = await postData({ familyType, name, phone, address, children, description, dateStart, dateEnd, nutrition });
+        console.log(response);
+      } else if (familyType === "guest") {
+        const response = await postData({ familyType, name, phone, children, description, dateStart, dateEnd, nutrition });
+        console.log(response);
+      }
     } catch (error) {
       console.error("Error:", error);
 
