@@ -1,6 +1,6 @@
-@media (width > 768px) {
+@media (width < 768px) {
     svg.bi.bi-facebook {
-        width: 25px;
-        height: 25px;
+        width: 25px !important;
+        height: 25px !important;
     }
 }
