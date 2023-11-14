@@ -11,7 +11,7 @@ import Omri from './components/Omri';
 function App() {
   return (
     <div className="[&_*]:font-heebo bg-background">
-      <Omri/>
+      <Omri />
       <Header />
       <Info />
       <FormContainer />

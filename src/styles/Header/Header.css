@@ -1,5 +1,5 @@
 .background-container {
-  
+
   background-image: url("../../assets/backGroundHeaderMobile.png");
   background-color: #E3DFE0;
   background-position: left bottom;
@@ -15,15 +15,15 @@
     background-position: left 80%;
   }
 } */
-@media (width > 768px){
-  .background-container{
+@media (width > 768px) {
+  .background-container {
     background-image: url("../../assets/backGroundHeader.png");
     background-position: 25%;
   }
 }
 
-@media (width > 1280px){
-  .background-container{
+@media (width > 1280px) {
+  .background-container {
     background-position: left;
   }
 }
