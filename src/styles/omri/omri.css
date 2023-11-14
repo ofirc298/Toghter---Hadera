@@ -1,11 +1,6 @@
-.bi .bi-facebook .facebook #faceIcon {
-    width: 45;
-    height: 45;
-}
-
 @media (width < 768px) {
-    .bi .bi-facebook .facebook #faceIcon {
-        width: 25 !important;
-        height: 25 !important;
+    svg.bi.bi-facebook {
+        width: 25px !important;
+        height: 25px !important;
     }
 }
